@@ -59,3 +59,23 @@ summarize the recurring pattern, and populate the audit log for 30-day CTR track
 Framework adapted from Kevin Indig's Growth Memo "The Meta Data Audit", built on clickstream
 research into the AIO reading-mode shift (47.5% back-scrolling; ~846,000 U.S. Google sessions,
 Feb-Mar 2026, analyzed by Eric Van Buskirk / Clickstream Solutions with Surfer SEO data).
+
+## Installation
+
+Ordner nach `~/.claude/skills/meta-data-audit-v3` kopieren oder dorthin verlinken, dann
+Claude Code neu starten. Aufruf per `/meta-data-audit-v3`.
+
+Die Daten für die Priorisierung liefern die Search-Console-MCPs: `gsc_click_curve` für die
+eigene CTR-Kurve, `gsc_ctr_opportunities` für die Kandidatenliste, `gsc_query_count` mit
+`url` für die Query-Coverage-Gap einer Seite.
+
+## Herkunft und Pflege
+
+Die gepflegte Arbeitskopie liegt im AI-Brain unter `skills/meta-data-audit-v3` — dort wird
+der Skill geladen und bearbeitet. Dieses Repo ist die veröffentlichte Kopie für GitHub und
+Forgejo. Nach einer Änderung im Brain abgleichen:
+
+```bash
+cp -r "C:/Users/david/David AI Brain/skills/meta-data-audit-v3/." "C:/Users/david/Claude-Code-Projekte/meta-data-audit-v3/"
+cd "C:/Users/david/Claude-Code-Projekte/meta-data-audit-v3" && git add -A && git commit -m "sync aus dem Brain" && git push origin main && git push forgejo main
+```
