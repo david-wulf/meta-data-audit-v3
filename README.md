@@ -71,11 +71,11 @@ eigene CTR-Kurve, `gsc_ctr_opportunities` für die Kandidatenliste, `gsc_query_c
 
 ## Herkunft und Pflege
 
-Die gepflegte Arbeitskopie liegt im AI-Brain unter `skills/meta-data-audit-v3` — dort wird
-der Skill geladen und bearbeitet. Dieses Repo ist die veröffentlichte Kopie für GitHub und
-Forgejo. Nach einer Änderung im Brain abgleichen:
+Die gepflegte Arbeitskopie liegt in einem privaten Repo unter `skills/meta-data-audit-v3` —
+dort wird der Skill geladen und bearbeitet. Dieses Repo ist die veröffentlichte Kopie. Nach
+einer Änderung abgleichen:
 
 ```bash
-cp -r "C:/Users/david/David AI Brain/skills/meta-data-audit-v3/." "C:/Users/david/Claude-Code-Projekte/meta-data-audit-v3/"
-cd "C:/Users/david/Claude-Code-Projekte/meta-data-audit-v3" && git add -A && git commit -m "sync aus dem Brain" && git push origin main && git push forgejo main
+cp -r "<Arbeitskopie>/skills/meta-data-audit-v3/." "<dieses Repo>/"
+cd "<dieses Repo>" && git add -A && git commit -m "sync aus der Arbeitskopie" && git push
 ```
